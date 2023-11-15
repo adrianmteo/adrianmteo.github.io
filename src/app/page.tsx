@@ -14,9 +14,9 @@ function calculateSize(
 
 export default function Home() {
   return (
-    <main className="p-12 text-center space-y-24 w-[100%] max-w-[768px] mx-auto min-h-screen flex flex-col justify-center">
+    <main className="p-4 md:p-12 text-center space-y-24 w-[100%] max-w-screen-md mx-auto min-h-screen flex flex-col justify-center">
       <div>
-        <h1 className="text-4xl leading-normal">
+        <h1 className="text-3xl md:text-4xl leading-normal">
           👋 My name is Adrian Mateoaea
           <br />
           and I am a 🧑‍💻 full-stack developer
@@ -29,11 +29,11 @@ export default function Home() {
           I have experience with the following technologies
         </h2>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {tech.map((tech, index) => (
             <div
               key={String(index)}
-              className="group rounded-md border border-gray-100 bg-white flex items-center justify-center p-4 relative overflow-hidden"
+              className="group rounded-md border border-gray-100 bg-white flex items-center justify-center p-6 relative overflow-hidden"
             >
               <Image
                 priority
