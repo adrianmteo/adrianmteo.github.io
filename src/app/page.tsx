@@ -6,41 +6,38 @@ import { Typewriter } from "react-simple-typewriter";
 
 const words = [
   "am a full-stack developer",
-  "work with TypeScript",
+  "build Web and APIs with TypeScript",
   "use GraphQL for my APIs",
   "have experience with Prisma and PostgreSQL",
-  "deploy bleeding edge web apps to Vercel",
-  "make beautiful native SwiftUI apps",
+  "deploy bleeding edge NextJS apps to Vercel",
+  "make beautiful native SwiftUI apps for iOS & watchOS",
+  "leverage Azure & Amazon services",
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
       <div className="text-center max-w-screen-md ">
-        <h1 className="text-4xl leading-snug font-semibold">
+        <h1 className="text-4xl leading-normal font-semibold">
           Hello, my name is{" "}
-          <span className="text-blue-600">Adrian Mateoaea</span>
+          <span className="text-gradient">Adrian Mateoaea</span>
           <br />
           and I work remotely from{" "}
           <Link
             target="_blank"
-            className="text-blue-600"
+            className="text-gradient"
             href="https://www.google.com/maps/place/Cluj-Napoca"
           >
             Cluj-Napoca
           </Link>
           .
           <br />I{" "}
-          <span className="text-blue-600">
+          <span className="text-gradient">
             <Typewriter
-              cursor
               loop={0}
               words={words}
+              cursor={false}
               typeSpeed={50}
-              cursorBlinking={false}
-              cursorStyle={
-                <span className="h-7 w-1 bg-white inline-block animate-pulse" />
-              }
               deleteSpeed={25}
               delaySpeed={2000}
             />
