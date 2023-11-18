@@ -1,2 +1,1 @@
-export * from "./tech";
-export * from "./contact";
+export * from "./words";
