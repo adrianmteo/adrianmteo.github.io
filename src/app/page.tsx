@@ -1,71 +1,69 @@
-import { contact, tech } from "@/assets/data";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 
-function calculateSize(
-  size: { width: number; height: number },
-  maxHeight: number
-) {
-  return {
-    width: (maxHeight / size.height) * size.width,
-    height: maxHeight,
-  };
-}
+const words = [
+  "am a full-stack developer",
+  "work with TypeScript",
+  "use GraphQL for my APIs",
+  "have experience with Prisma and PostgreSQL",
+  "deploy bleeding edge web apps to Vercel",
+  "make beautiful native SwiftUI apps",
+];
 
 export default function Home() {
   return (
-    <main className="p-4 md:p-12 text-center space-y-24 w-[100%] max-w-screen-md mx-auto min-h-screen flex flex-col justify-center">
-      <div>
-        <h1 className="text-3xl md:text-4xl leading-normal">
-          👋 My name is Adrian Mateoaea
+    <main className="min-h-screen flex flex-col items-center justify-center">
+      <div className="text-center max-w-screen-md ">
+        <h1 className="text-4xl leading-snug font-semibold">
+          Hello, my name is{" "}
+          <span className="text-blue-600">Adrian Mateoaea</span>
           <br />
-          and I am a 🧑‍💻 full-stack developer
-          <br /> living in 🇷🇴 Cluj-Napoca, Romania.
+          and I work remotely from{" "}
+          <Link
+            target="_blank"
+            className="text-blue-600"
+            href="https://www.google.com/maps/place/Cluj-Napoca"
+          >
+            Cluj-Napoca
+          </Link>
+          .
+          <br />I{" "}
+          <span className="text-blue-600">
+            <Typewriter
+              cursor
+              loop={0}
+              words={words}
+              typeSpeed={50}
+              cursorBlinking={false}
+              cursorStyle={
+                <span className="h-7 w-1 bg-white inline-block animate-pulse" />
+              }
+              deleteSpeed={25}
+              delaySpeed={2000}
+            />
+          </span>
+          .
         </h1>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h2 className="text-xl mb-8">
-          I have experience with the following technologies
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-          {tech.map((tech, index) => (
-            <div
-              key={String(index)}
-              className="group rounded-md border border-gray-100 bg-white flex items-center justify-center p-6 relative overflow-hidden"
-            >
-              <Image
-                priority
-                src={tech.src}
-                alt={tech.name}
-                {...calculateSize(tech, 80)}
-                style={{ ...calculateSize(tech, 80) }}
-              />
-
-              <div className="absolute p-2 w-full h-full backdrop-blur-md bg-white bg-opacity-75 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity">
-                <h3 className="font-medium">{tech.name}</h3>
-                <p className="text-sm">{tech.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center space-y-4">
-        <p>Contact me</p>
-
-        {contact.map((contact, index) => (
-          <Link key={String(index)} href={contact.href} target="_blank">
+        <div className="mt-6">
+          <Link
+            target="_blank"
+            href="https://github.com/adrianmteo"
+            className="text-black bg-white rounded-md px-4 py-2 font-semibold inline-flex justify-center"
+          >
             <Image
               priority
-              src={contact.src}
-              alt={contact.name}
-              {...calculateSize(contact, 24)}
-              style={{ ...calculateSize(contact, 24) }}
+              width={24}
+              height={24}
+              alt="GitHub"
+              src="/images/github.svg"
+              className="inline-block mr-2"
             />
+            <span>GitHub</span>
           </Link>
-        ))}
+        </div>
       </div>
     </main>
   );
