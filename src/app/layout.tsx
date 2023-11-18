@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hello, my name is Adrian Mateoaea",
-  description: "",
+  description: "My personal page",
   keywords:
     "full,stack,developer,web,apis,typescript,graphql,prisma,postgresql,nextjs,vercel,swiftui,ios,watchos,azure,amazon",
 };
