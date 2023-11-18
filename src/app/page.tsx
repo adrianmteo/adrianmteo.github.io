@@ -45,7 +45,7 @@ export default function Home() {
               priority
               width={24}
               height={24}
-              alt="GitHub"
+              alt="GitHub Logo"
               src="/images/github.svg"
               className="inline-block mr-2"
             />
