@@ -16,8 +16,8 @@ const words = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center">
-      <div className="text-center max-w-screen-md p-4">
+    <main className="min-h-screen flex flex-col items-center justify-center p-4">
+      <div className="text-center max-w-screen-md">
         <h1 className="text-3xl md:text-4xl leading-normal font-semibold">
           Hello, my name is{" "}
           <span className="text-gradient">Adrian Mateoaea</span>
