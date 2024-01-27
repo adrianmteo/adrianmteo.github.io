@@ -9,21 +9,21 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-4">
       <div className="text-center max-w-screen-lg">
-        <h1 className="leading-snug text-3xl md:text-4xl text-gray-300 md:leading-normal">
+        <h1 className="leading-snug text-3xl md:text-4xl text-white md:leading-normal">
           Hello, my name is{" "}
-          <span className="font-semibold text-white">Adrian Mateoaea</span>
+          <span className="font-semibold">Adrian Mateoaea</span>
           <br />
           and I work remotely from{" "}
           <Link
             target="_blank"
-            className="font-semibold text-white"
+            className="font-semibold"
             href="https://www.google.com/maps/place/Cluj-Napoca"
           >
             Cluj-Napoca
           </Link>
           .
           <br />I{" "}
-          <span className="font-semibold text-white">
+          <span className="font-semibold">
             <Typewriter
               loop={0}
               words={words}
