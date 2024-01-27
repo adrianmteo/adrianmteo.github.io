@@ -14,6 +14,6 @@ body {
 
 @layer components {
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-600;
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-slate-300 to-slate-500;
   }
 }
