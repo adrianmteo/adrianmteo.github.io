@@ -11,9 +11,3 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
-
-@layer components {
-  .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-b from-slate-300 to-slate-500;
-  }
-}

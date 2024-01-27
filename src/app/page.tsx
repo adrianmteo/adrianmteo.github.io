@@ -8,22 +8,22 @@ import { Typewriter } from "react-simple-typewriter";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-4">
-      <div className="text-center max-w-screen-md">
-        <h1 className="leading-snug text-3xl md:text-4xl md:leading-relaxed font-semibold">
+      <div className="text-center max-w-screen-lg">
+        <h1 className="leading-snug text-3xl md:text-4xl text-gray-300 md:leading-normal">
           Hello, my name is{" "}
-          <span className="text-gradient">Adrian Mateoaea</span>
+          <span className="font-semibold text-white">Adrian Mateoaea</span>
           <br />
           and I work remotely from{" "}
           <Link
             target="_blank"
-            className="text-gradient"
+            className="font-semibold text-white"
             href="https://www.google.com/maps/place/Cluj-Napoca"
           >
             Cluj-Napoca
           </Link>
           .
           <br />I{" "}
-          <span className="text-gradient">
+          <span className="font-semibold text-white">
             <Typewriter
               loop={0}
               words={words}
