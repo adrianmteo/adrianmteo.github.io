@@ -1,6 +1,6 @@
 "use client";
 
-import { contact, words } from "@/assets/data";
+import { contact, projects, words } from "@/assets/data";
 import Image from "next/image";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
@@ -35,6 +35,8 @@ export default function Home() {
           </span>
           .
         </h1>
+
+        <h2 className="mt-8 font-bold">Contact</h2>
         <div className="mt-6 flex items-center justify-center gap-2 flex-wrap">
           {contact.map((contact, index) => (
             <Link
@@ -52,6 +54,35 @@ export default function Home() {
                 className="inline-block mr-2"
               />
               <span>{contact.name}</span>
+            </Link>
+          ))}
+        </div>
+
+        <hr className="mt-8 border-none bg-white/25 h-[0.5px]" />
+
+        <h2 className="mt-8 font-bold">Recent Projects</h2>
+        <div className="mt-6 flex justify-center gap-4 flex-wrap">
+          {projects.map((project, index) => (
+            <Link
+              target="_blank"
+              key={String(index)}
+              href={project.href}
+              className="font-semibold inline-block max-w-[200px]"
+            >
+              <Image
+                priority
+                width={64}
+                height={64}
+                src={project.src}
+                alt={`${project.name} Logo`}
+                className="inline-block rounded-2xl object-cover"
+              />
+              <h3 className="mt-4">
+                {project.name} ({project.platform})
+              </h3>
+              <p className="text-sm opacity-60 font-normal mt-2">
+                {project.description}
+              </p>
             </Link>
           ))}
         </div>
